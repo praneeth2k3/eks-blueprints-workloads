@@ -11,8 +11,8 @@ spec:
     namespace: team-riker
     server: {{ .Values.spec.destination.server }}
   source:
-    repoURL: https://github.com/praneeth2k3/eks-blueprints-workloads
-    targetRevision: main
+    repoURL: {{ .Values.spec.source.repoURL }}
+    targetRevision: {{ .Values.spec.source.targetRevision }}
     path: teams/team-riker/dev
     helm:
       parameters:
